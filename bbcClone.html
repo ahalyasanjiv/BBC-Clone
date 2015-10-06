@@ -54,12 +54,7 @@
 		padding:0;
 		margin:0;
 	}
-	#top-menu li {
-		border-right: 1px solid #CCCCCC;
-		list-style:none;
-		float:left;
-		padding: 13px 16px 0px 16px;
-		height:27px;
+
 		
 	}
 	#more {
@@ -86,12 +81,27 @@
 	.clear{
 		clear:both;
 	}
-	
+	.general {
+		float:left;
+		height:39.5px;
+		border-right: 1px solid #CCCCCC;
+	}
+	.in-general li{
+		float:left;
+		list-style:none;
+		padding:12px 16px 9px 16px;
+	}
+	.in-general a:link {
+		color:black;
+		text-decoration:none;
+	}
+	.in-general li:hover {
+	 	border-bottom:4px solid #1188BB;
+	}
 	#news-bar {
 		background-color:#BB1919;
 		width:100%;
 		height:56px;
-		color:#FEFCFC;
 		font-family:Helmet, Freesans, Helvetica, Arial, sans-serif;	
 		float:left;
 	}
@@ -104,9 +114,10 @@
 	#newsheader{
 		font-size:2.5em;
 	}
-	
-	#uk{
-		font-size:.5em;
+	#news-logo {
+		position:relative;
+		top:7px;
+		left:7px;
 	}
 	
 	#rss {
@@ -127,51 +138,95 @@
 		margin:0;
 		padding:0 0 4px 0;
 	}
-	#topic-bar li {
+		
+	#selected {
+		border-bottom: 4px solid white;
+	}
+	.topics {
+		float:left;
+		padding-bottom:5px;
+		margin-top:10px;
+	}
+	.topics:hover {
+		border-bottom: 4px solid white;
+	}
+	.topics a:link {
+		text-decoration:none;
+		color:white;
+	}
+	#topic-more {
+		padding:10px 12.5px 9px 11.5px;
+		font-size:14px;
+		position:relative;
+		left:3px;
+		list-style:none;
+		float:left;
+	}
+	
+	#topic-more:hover {
+		background-color:#000000;
+	}
+	#topic-more a:link {
+		text-decoration:none;
+	}
+	.in-topics li{
+		padding:0px 13px 0px 13px;
+		font-size:14px;
 		border-right: 1px solid #BB4545;
 		list-style:none;
 		float:left;
 		color:white;
-		font-size:14px;
-		padding:0px 12.5px 0px 11.5px;
-		margin-top:10px;
-		position:relative;
-		left:3px;
-		background-color:none;
 	}
-	#selected {
-		border-bottom: 4px solid white;
-		height:20px;
-		padding-bottom:1px !important;
+	.in-topics a:link{
+		color:#ffffff;
+		text-decoration:none;
 	}
 	
-	#nations{
-		width:100
-		
-	}
-	
-	#nations ul {
+	.in-nations ul {
+		float:left;
 		margin:10px 0 0 0;
 		padding:0;
 	}
 	
-	#nations li{
+	.in-nations li{
 		float:left;
+		height:10px;
 		list-style:none;
-		padding:1px 12px 1px 12px;
+		padding:0px 10px 12px 12px;
 		font-size:.9em;
 		border-right:1px solid #DCDCDC;
+		margin:0;
 	}
-	#uk2{
+	.in-nations a:link {
+		color:#222222;
+		text-decoration:none;
+	}
+	.in-nations a:hover {
+		color:#222222;
+		text-decoration:none;
+	}
+	.in-nations a:visited {
+		color:#222222;
+		text-decoration:none;
+	}
+	.nations {
+		float:left;
+		height:24px;
+		position:relative;
+		top:-5px;
+		left:-35px;
+	}
+	.nations:hover{
 		border-bottom:4px solid #bb1919;
 	}
 	#left-side {
 		width: 665px; 
-		height: 2471px;
+		height: 750px;
 		border-right:1px solid #CCCCCC;
 		float:left;
-		margin-top:25px;
+		margin-top:15px;
 		margin-left:10px;
+		margin-right:20px;
 	}
 	#first-box {
 		width:650px;
@@ -190,7 +245,17 @@
 		letter-spacing:-1px;
 		padding:0;
 		margin-bottom:9px;
-		
+	}
+	.headline a:link{
+		color:black;
+		text-decoration:none;
+	}
+	.headline a:visited{
+		color:#686868;
+		text-decoration:none;
+	}
+	.headline a:hover {
+		color:#1167A8;
 	}
 	.description {
 		padding:0;
@@ -207,39 +272,15 @@
 		height:223px;
 		padding-left:13px;
 	}
-	.clock {
-		float:left;
-		position:relative;
-		top:2px;
-		width:17px;
-		height:15px;
-	}
-	.the-time {
-		padding-left:5px;
-		padding-right:2px;
-		border-right:1px solid #DCDCDC;
-		color:#5A5A5A;
-		margin-top:12px	;
-		font-size:.8em;
-	}	
-	.category {
-		color:#A85445;
-		padding-left:5px;
-		font-size:.8em;
-	}
-	.info {
-		padding-top:-4px;
-	}
-	.related-content {
-		line-height:12px;
-		font-size:.85em;
-	}
+	
 	#second-box{
 		float:left;
 		width:215px;
 		height:350px;
 		padding:0px 10px 30px 0;
 		border-right:1px solid #DBDBDB;
+		line-height:17px;
+
 	}
 	#second-box img {
 		width:215px;
@@ -249,8 +290,178 @@
 		padding:0;
 		margin:0;
 	}
-	</style>
+	.clock {
+		float:left;
+		position:relative;
+		top:2px;
+		width:15px;
+		height:15px;
+	}
+	.clock2 {
+		float:left;
+		width:15px;
+		height:15px;
+		position:relative;
+		top:1px;
+	}
+	.the-time {
+		padding-left:5px;
+		padding-right:2px;
+		border-right:1px solid #DCDCDC;
+		color:#5A5A5A;
+		margin-top:12px	;
+		font-size:.8em;
+	}	
+	.the-time2 {
+		padding-left:0px;
+		padding-right:2px;
+		border-right:1px solid #DCDCDC;
+		color:#5A5A5A;
+		margin:0px	;
+		font-size:.8em;
+	}
+	.category {
+		color:#A85445;
+		padding-left:5px;
+		font-size:.8em;
+	}
+	.info {
+		padding-top:-10px;
+	}
+	.info2 {
+		position:relative;
+		top:-10px;
+	}
+	.related-content {
+		line-height:12px;
+		font-size:.85em;
+	}
+	.related-links a:link{
+		color: #404040;
+		text-decoration:none;
+	}
+	.related-links a:visited{
+		color:#5A5A5A;
 
+	}
+	.related-links a:hover{
+		color:#4C9BD8;
+
+	}
+	#third-box {
+		float:left;
+		width:215px;
+		height:350px;
+		padding:0px 10px 30px 10px;
+		border-right:1px solid #DBDBDB;
+		line-height:17px;
+		margin-right:15px;
+	}
+	#third-box h3{
+		padding:0;
+		margin:0;
+	}
+	#aircraft-image {
+		width:215px;
+		height:121px;
+	}
+	#fourth-box {
+		float:left;
+		width:149px;
+		height:118px;
+		border-bottom:1px solid #DBDBDB;
+	}
+	#fourth-box h4{
+		margin-top:5px;
+		margin-bottom:5px;
+	}
+	#fifth-box {
+		float:left;
+		width:149px;
+		height:118px;
+		border-bottom:1px solid #DBDBDB;
+	}
+	#fifth-box h4{
+		margin-bottom:5px;
+	}
+	#sixth-box {
+		float:left;
+		width:149px;
+		height:118px;
+	}
+	#sixth-box h4{
+		margin-bottom:5px;
+	}
+	#right-side {
+		float:left;
+		padding:20px 0 0 0px;
+		max-width:298px;
+		height: 750px;
+	}
+	#right-side h2{
+		font-weight:normal;
+		color:#404040;
+	}
+	#radio-live {
+		padding:0 0 0 10px;
+		margin:0;
+		position:relative;
+		top:-5px;
+	}
+	#topic-bar a:link {
+		color:white;
+	}
+	#radio-live a:link{
+		color: #404040;
+		text-decoration:none;
+	} 
+	#radio-live a:visited{
+		color:#5A5A5A;
+
+	}
+	#radio-live a:hover{
+		color:#4C9BD8;
+	}
+	#right-side h4 {
+		padding: 0;
+		margin:0;
+		line-height:1.25em;
+	}
+
+	.vids img {
+		float:left;
+		padding:0 10px 10px 0;
+		margin:0;
+
+	}
+	.vids {
+		padding-bottom:0px;
+		border-bottom: 1px solid #DBDBDB;
+		margin-bottom:10px;
+	}
+	.vid-links a:link{
+		color:black;
+		text-decoration:none;
+	}
+	.vid-links a:visited{
+		color:#404040;
+	}
+	.vid-links a:hover{
+		color:#1167A8;
+	}
+	.vids a:link{
+		color:black;
+		text-decoration:none;
+	}
+	.vids a:visited{
+		color:#404040;
+	}
+	.vids a:hover{
+		color:#1167A8;
+	}
+	
+	</style>
+	
 </head>
 
 <body>
@@ -270,13 +481,13 @@
 			
 				<div id="top-menu">
 					<ul>
-						<li>News</li>
-						<li>Sport</li>
-						<li>Weather</li>
-						<li>Shop</li>
-						<li>Earth</li>
-						<li>Travel</li>
-						<li>More <img src= "images/more-tri.png" id="more" /></li>
+						<div class="general"><div class="in-general"><a href="http://www.bbc.com/news"><li style="border-color:#992211">News</li></a></div></div>
+						<div class="general"><div class="in-general"><a href="http://www.bbc.com/sport/0/"><li style="border-color:#FFEE11">Sport</li></a></div></div>
+						<div class="general"><div class="in-general"><a href="http://www.bbc.com/weather/"><li style="border-color:#88CCEE">Weather</li></a></div></div>
+						<div class="general"><div class="in-general"><a href="http://shop.bbc.com/us/page/home"><li>Shop</li></a></div></div>
+						<div class="general"><div class="in-general"><a href="http://www.bbc.com/earth/world"><li style="border-color:#262626">Earth</li></a></div></div>
+						<div class="general"><div class="in-general"><a href="http://www.bbc.com/travel/"><li style="border-color:#262626">Travel</li></a></div></div>
+						<div class="general"><div class="in-general"><a href=""><li style="border-color:#262626">More <img src= "images/more-tri.png" id="more"/></li ></a></div></div>
 					</ul>
 					
 					<div id="searchdiv">
@@ -294,7 +505,7 @@
 		<div id="news-bar">
 
 			<div class="fixed-width">
-				<p id="newsheader">NEWS <span id="uk">UK</span> </p>
+				<img id="news-logo" src="images/news-logo.png"/>
 				<div id="rss">
 				RSS
 				<img src="images/rss.png"/>
@@ -306,34 +517,36 @@
 				<div id="topic-bar">
 				<div class="fixed-width">
 					<ul>
-						<li>Home</li>
-						<li>Video</li>
-						<li>World</li>
-						<li>US & Canada</li>
-						<li id="selected">UK</li>
-						<li>Business</li>
-						<li>Tech</li>
-						<li>Science</li>
-						<li>Magazine</li>
-						<li>Entertainment & Arts</li>
-						<li>Health</li>
-						<li style="border-right:none">More <img src="images/more-down.png"/> </li>
+						<div class="topics"><div class="in-topics"><li><a style="color:white" href="http://www.bbc.com/news">Home</a></li></div></div>
+						<div class="topics"><div class="in-topics"><li><a style="color:white" href="http://www.bbc.com/news/video_and_audio/international">Video</a></li></div></div>
+						<div class="topics"><div class="in-topics"><li><a style="color:white" href="http://www.bbc.com/news/world">World</a></li></div></div>
+						<div class="topics"><div class="in-topics"><li><a style="color:white" href="http://www.bbc.com/news/world/us_and_canada">US & Canada</a></li></div></div>
+						<div id="selected" class="topics"><div class="in-topics"><li><a style="color:white" href="http://www.bbc.com/news/uk">UK</a></li></div></div>
+						<div class="topics"><div class="in-topics"><li><a style="color:white" href="http://www.bbc.com/news/business">Business</a></li></div></div>
+						<div class="topics"><div class="in-topics"><li><a style="color:white" href="http://www.bbc.com/news/technology">Tech</a></li></div></div>
+						<div class="topics"><div class="in-topics"><li><a style="color:white" href="http://www.bbc.com/news/science_and_environment">Science</a></li></div></div>
+						<div class="topics"><div class="in-topics"><li><a style="color:white" href="http://www.bbc.com/news/magazine">Magazine</a></li></div></div>
+						<div class="topics"><div class="in-topics"><li><a style="color:white" href="http://www.bbc.com/news/entertainment_and_arts">Entertainment & Arts</a></li></div></div>
+						<div class="topics"><div class="in-topics"><li><a style="color:white" href="http://www.bbc.com/news/health">Health</a></li></div></div>
+						<div id="topic-more"><li style="border-right:none"><a style="color:white" href="">More <img src="images/more-down.png"/> </a></li></div>
 						
 					</ul>
 				</div>
 				</div>
 		<div class="clear"></div>
 					
-		<div id="nations">
+		
 			<div class="fixed-width">
+				
 				<ul>
-					<li style="font-size:1.25em" id="uk2">UK</li>
-					<li>England</li>
-					<li>N. Ireland</li>
-					<li>Scotland</li>
-					<li>Wales</li>
-					<li>Politics</li>	
+					<div class="nations" style="border-bottom:4px solid #bb1919"><div class="in-nations"><li style="font-size:1.25em"><a href="http://www.bbc.com/news/uk" >UK</a></li></div></div>
+					<div class="nations"><div class="in-nations"><li><a href="http://www.bbc.com/news/england">England</a></li></div></div>
+					<div class="nations"><div class="in-nations"><li><a href="http://www.bbc.com/news/northern_ireland">N. Ireland</a></li></div></div>
+					<div class="nations"><div class="in-nations"><li><a href="http://www.bbc.com/news/scotland">Scotland</a></li></div></div>
+					<div class="nations"><div class="in-nations"><li><a href="http://www.bbc.com/news/wales">Wales</a></li></div></div>
+					<div class="nations"><div class="in-nations"><li><a href="http://www.bbc.com/news/politics">Politics</a></li></div></div>
 				</ul>
+				</div>
 			</div>
 		</div>
 		<div class="clear"></div>
@@ -342,41 +555,132 @@
 				<div id="left-side">
 				
 				<div id="first-box">
-					<h1>Call to punish GPs over antibiotics</h1>
+					<h1 class="headline"><a href="http://www.bbc.com/news/health-33961241">Call to punish GPs over antibiotics</a></h1>
 					<img src = "images/antibiotics.png" id="antibiotics"/>
 					<p class="description">"Soft-touch and "hazardous" doctors should 
 					be disciplined for prescribing too many antibiotics,
 					 a leading NHS figure says.</p>
 					 <p class="info">
-					 <span class="the-time"> <img src="images/clock.png" style="clock"/>
+					 <span class="the-time"> <img src="images/clock.png" class="clock"/>
 					 2 hours ago </span>
 					 <span class="category">Health</span>
 					 </p>
-					 <p class="related-content">Analysis: Antibiotic apocalypse</p>
-					 <p class="related-content">Antibiotic resistance rise continues</p>
-					 <p class="related-content">80,000 'might die' in future outbreak</p>
+					 <p class="related-content related-links"> <a href=
+					"http://www.bbc.com/news/health-21702647">Analysis: 
+					Antibiotic apocalypse</a></p>
+					 <p class="related-content related-links"><a href=
+					 "http://www.bbc.com/news/health-29553435">Antibiotic resistance rise 
+					 continues</a></p>
+					 <p class="related-content related-links"><a href=
+					 "http://www.bbc.com/news/uk-32193606">80,000 
+					 'might die' in future outbreak</a></p>
 				</div>
 				
-		<div class="clear"></div>
+			<div class="clear"></div>
 		
 				<div id="second-box">
 					<img src="images/train.png"/>
-					<h3 style="line-height:24px"> Rail fares 'rise faster than wages'</h3>
+					<h3 style="line-height:24px" class="headline"><a href="http://www.bbc.com/news/business-33968318"> Rail fares 'rise faster than wages'</a></h3>
 					<p class="description">Regulated rail fares are to rise by 1% in 
 					January, the Department of Transport has said.</p>
 					<p class="info">
 					<span class="the-time"> 
-					<img src="images/clock.png" class="clock"/>
+					<img src="images/clock.png" style="width:15px; height:15px;position:relative;
+					top:2px;"  />
 					7 hours ago </span>
 					<span class="category">Business</span>
 					</p>
-					<p class="related-content">Tories in rail fare inflation pledge</p>
-					<p class="related-content">Minister defends rail fare rises</p>
+					<p class="related-content related-links"><a href="http://www.bbc.com/news/election-2015-32245068">Tories in rail fare inflation pledge</a></p>
+					<p class="related-content related-links"><a href="http://www.bbc.com/news/uk-30652098">Minister defends rail fare rises</a></p>
 				</div>
+				
+				<div id="third-box">
+					<img id="aircraft-image" src="images/aircraft.jpg"/>
+					<h3 style="line-height:24px" class="headline"> <a href=
+					"http://www.bbc.com/news/uk-england-london-33966632">
+					Battle of Britain anniversary marked</a></h3>
+					<p class="description">Aircraft including 18 Spitfires and six 
+					Hurricanes have flown over south-east England to mark 75 years since 
+					the Battle of Britain's "Hardest Day".</p>
+					<p class="info">
+					<span class="the-time"> <img src="images/clock.png" class="clock"/>
+					 50 minutes ago </span>
+					<span class="category">London</span>
+					</p>
+					<p class="related-content related-links"><a href=
+					"http://www.bbc.com/news/uk-england-london-33966632">'Hardest day' flypast</a></p>
+					<p class="related-content related-links"><a href="http://www.bbc.com/news/uk-33980067">'An awesome sound'</a></p>
+				</div>
+				
+				<div id="fourth-box">
+					<h4 class="headline"><a href="http://www.bbc.com/news/uk-33979568">
+					Record number of sex crimes on trains</a></h4>
+					<p><span class="the-time"> <img src="images/clock.png" class="clock"/>
+					 1 hour ago </span> <span class="category">UK</span> </p>
+				</div>
+				
+				<div id="fifth-box">
+					<h4 class="headline"><a href="http://www.bbc.com/news/business-33983053">
+					Rates to rise soon, says MPC's Miles</a></h4>
+					<p><span class="the-time"> <img src="images/clock.png" class="clock"/>
+					 2 hours ago </span> <span class="category">Business</span> </p>
+				</div>
+				<div id="sixth-box">
+					<h4 class="headline"><a href=
+					"http://www.bbc.com/news/uk-england-merseyside-33983899">Everton star accused over hit-and-run</a></h4>
+					<p><span class="the-time"> <img src="images/clock.png" class="clock"/>
+					 1 hour ago </span> <span class="category">Liverpool</span> </p>
+				</div>
+			</div>
+			
+			
+			<div id="right-side">
+				<h2>Watch/Listen</h2>
+				<p><img src="images/live.png"/>
+				<span id="radio-live" class="related-links">
+				<a href="http://www.bbc.co.uk/radio/player/bbc_radio_fourfm" target="_blank">
+				Today programme</a></span></p>
+				
+					
+					<div class="vids"> <a href="http://www.bbc.com/news/uk-33981995"/a>
+						<img src="images/vid-1.png"/><h4> <div class="vid-links"><a href="http://www.bbc.com/news/uk-33981995" >'Supercar season' hits central London</a> </div></h4>
+						<p class="info2"> <span class=the-time2> <img src="images/clock.png" class="clock2"/>
+						 8 hours ago </span> <span class="category">UK</span> </p>
+					 </div>
+					 
+					<div class="vids"><a href="http://www.bbc.com/news/entertainment-arts-33984358"/>
+						<img src="images/vid-2.png"/><h4><div class="vid-links"><a href="http://www.bbc.com/news/entertainment-arts-33984358">Ten year old pianist plays to patients</a></div></h4>
+						<p class="info2"> <span class=the-time2> <img src="images/clock.png" class="clock2"/>
+						 14 minutes ago</span> <span class="category">Entertainment & Arts</span></p>
+					 </div>
+					 
+					<div class="vids"><a href="http://www.bbc.com/news/uk-33980070"/>
+						<img src="images/vid-3.png"/><h4><div class="vid-links"><a href="http://www.bbc.com/news/uk-33980070">Drone footage of rubbish mountain</a></div></h4>
+						<p class="info2"> <span class=the-time2><img src="images/clock.png" class="clock2"/>
+						 18 August 2015</span> <span class="category">UK</span> </p>
+					</div>
+					 
+					<div class="vids"><a href="http://www.bbc.com/news/uk-33984360"/>
+						<img src="images/vid-4.png"/><h4><div class="vid-links"><a href="http://www.bbc.com/news/uk-33984360"> Transport sexual offences rise</a></div></h4>
+						<p class="info2"> <span class=the-time2> <img src="images/clock.png" class="clock2"/>
+						 10 minutes ago</span>  <span class="category">UK</span> </p>
+					</div>
+					 
+					<div class="vids"><a href="http://www.bbc.com/news/uk-england-leicestershire-33982882"/>
+						<img src="images/vid-5.png"/><h4><div class="vid-links"><a href="http://www.bbc.com/news/uk-england-leicestershire-33982882"> Rower half-way across the Atlantic</a></div></h4>
+						<p class="info2"> <span class=the-time2><img src="images/clock.png" class="clock2"/>
+						 18 August 2015</span> <span class="category">Leicester</span> </p>
+					</div>
+					 
+					<div class="vids"><a href="http://www.bbc.com/news/health-33984357"/>
+						<img src="images/vid-6.png"/><h4><div class="vid-links"><a href="http://www.bbc.com/news/health-33984357">How E-cigarettes helped me quit</a></div></h4>
+						<p class="info2"> <span class=the-time2><img src="images/clock.png" class="clock2"/>
+						 1 hour ago</span>  <span class="category">Health</span></p>
+					</div>
 				
 				</div>
 			</div>
-		</div>
+			
 	</div>
 
 </body>
